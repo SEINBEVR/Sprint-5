@@ -1,10 +1,5 @@
 package ru.sber.streams
 
-import java.lang.Thread.yield
-import java.util.*
-import java.util.stream.Collectors
-
-
 // 1. Используя withIndex() посчитать сумму элементов листа, индекс которых кратен 3. (нулевой индекс тоже входит)
 fun getSumWithIndexDivisibleByThree(list: List<Long>): Long =
      list.withIndex().filter {
