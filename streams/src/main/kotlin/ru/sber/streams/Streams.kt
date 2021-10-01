@@ -14,13 +14,9 @@ fun getSumWithIndexDivisibleByThree(list: List<Long>): Long =
 
 // 2. Используя функцию generateSequence() создать последовательность, возвращающую числа Фибоначчи.
 fun generateFibonacciSequence(): Sequence<Int> =
-     sequence {
-        var terms = Pair(0, 1)
-        while (true) {
-            yield(terms.first)
-            terms = Pair(terms.second, terms.first + terms.second)
-        }
-    }
+     generateSequence(Pair(0, 1)) {
+         Pair(it.second, it.first + it.second)
+     }.map { it.first }
 
 
 // 3. Получить города, в которых есть покупатели.
